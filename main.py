@@ -8,7 +8,7 @@ app.config['DEBUG'] = True
 def index():
     count = int(request.cookies.get('visit-count', 0))
     count += 1
-    message = 'You have visited this page' + str(count) + 'times'
+    message = 'You have visited this page ' + str(count) + ' times'
 
     # make a response, set cookie, return
     resp = make_response(message)
@@ -16,4 +16,4 @@ def index():
     return resp
 
 
-    app.run()
+app.run()
